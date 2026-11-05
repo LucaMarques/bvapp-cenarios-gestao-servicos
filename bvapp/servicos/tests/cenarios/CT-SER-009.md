@@ -52,11 +52,10 @@ Serviços 901 e 902 existentes não excluídos; 903 excluído; 999 inexistente. 
 | Passo 1 | ID 999 | Informar não encontrado; nenhum PDF gerado. Dados intactos. |
 | Passo 1 | ID 903 | Mesmo resultado de não encontrado, pois está excluído. Nenhum PDF. |
 | Passo 2 | Falha preparada de geração para 901 | Informar falha sem detalhes internos e sem permitir download incompleto. Nenhum arquivo válido dessa tentativa. |
-| Passo 1 | Selecionar 902 em tentativa independente | Gerar somente `servico_902.pdf`, com campos de 902, A02 e O94. Periodicidade zero aparece como Não recorrente; última realização Não informado e próxima execução Não se aplica. Nenhum dado exclusivo de 901 deve aparecer. Terminar com PDF de 902. |
 
 ## Regras de negócio
 
-Serviço inexistente ou excluído não gera PDF. Relações excluídas não entram no documento; OS cancelada não excluída entra. Datas presentes usam DD/MM/AAAA. Datas opcionais ausentes usam Não informado; o campo calculado próxima execução de serviço pontual usa Não se aplica, conforme regra específica. Nenhum ID definitivo de backlog é atribuído a esta feature.
+Serviço inexistente ou excluído não gera PDF. Relações excluídas não entram no documento; OS cancelada não excluída entra. Datas presentes usam DD/MM/AAAA. Datas opcionais ausentes usam Não informado, com a dúvida abaixo restrita ao rótulo de próxima execução no PDF individual de serviço pontual. Nenhum ID definitivo de backlog é atribuído a esta feature.
 
 ## Dados e resultados esperados
 

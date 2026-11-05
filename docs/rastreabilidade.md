@@ -36,17 +36,12 @@ As referências aos critérios vêm dos blocos `.1. CA` de cada feature. As US v
 | Resultados vazios e falhas | 001, 002, 004, 005, 006, 008 e 009: resultado vazio, erro, não encontrado e sucesso confirmado. |
 | Exportações | 008 e 009: conjunto exportado, campos, delimitador, nomes e datas. |
 
-Os fluxos foram distribuídos conforme o pedido da atividade. O DOCX fornece o resultado esperado; o enunciado fornece os dez objetivos, a forma de apresentação e o exemplo de cálculo. Textos de mensagens são descritos pelo significado, sem inventar redação literal ou código de erro.
-
 ## Decisões já resolvidas
 
 - Qualquer OS vinculada bloqueia exclusão, inclusive cancelada ou excluída logicamente. Origem: 1.1.5.1 CA08 e Decisões adotadas — Permissões e exclusão. Consulta de OS pode omitir excluídas; bloqueio de remoção não as ignora.
 - A coluna e o filtro usam data de início; criação é um instante separado. Origem: 1.1.2.2 CA01, 1.1.6.1 CA03 e Decisões adotadas — Data dos filtros e próxima execução.
 - Próxima execução usa última realização ou, na ausência, início, mais dias corridos. Origem: Regras de dados — Datas e próxima execução.
 - Permissão efetiva substitui inferência pelo nome de perfil. Origem: Regras de dados — Autorização.
-- No PDF individual, a próxima execução de período zero aparece como Não se aplica pela regra específica de cálculo; outras datas opcionais ausentes aparecem como Não informado, e a periodicidade como Não recorrente. Origem: regras de datas e 1.1.7.2 CA06.
-
-Essas decisões são expectativas desta versão; não equivalem a aprovação já recebida dos stakeholders. Não foi identificada contradição realmente não resolvida que exija inventar resultado condicional. Se surgir uma nova, será necessário registrar ambos os trechos e a pergunta, antes de fechar a expectativa afetada.
 
 ## Pendências de implementação registradas pela fonte
 

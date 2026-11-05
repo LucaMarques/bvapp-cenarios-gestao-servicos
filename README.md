@@ -12,13 +12,13 @@ Esta entrega reúne dez cenários documentais do módulo de Gestão de Serviços
 
 A fonte normativa é `BVapp_Gestao_Servicos_Ajustada.docx`, fornecido pelo autor, especialmente as seções 1.1.1 a 1.1.7, Regras de dados e tratamento de falhas, Decisões adotadas e evidências no código e Ajustes que ainda faltam no código. A numeração e os IDs do backlog foram preservados. CA e US são identificadores locais à respectiva feature: CA01 de cadastro não é CA01 de consulta.
 
-O DOCX e eventuais planilhas não fazem parte da publicação. O código da equipe não foi recebido nem analisado nesta entrega: as pendências citadas vêm da análise estática já registrada no DOCX. Não há aplicação, banco de dados, testes automatizados, credenciais ou dados reais neste repositório.
+O DOCX e eventuais planilhas não fazem parte da publicação. As pendências de implementação citadas vêm da análise estática já registrada no DOCX. Não há aplicação, banco de dados, testes automatizados, credenciais ou dados reais neste repositório.
 
 O escopo inclui cadastro, consulta, ordenação, detalhes, edição, remoção, filtros, exportação da lista e PDF individual. Gráficos (1.1.8, Ryan), manutenção de tipos (Thaty) e gestão de OS (Mariana) ficam fora. Tipos, ativos e OS aparecem somente como dados fictícios de apoio às regras do próprio serviço. Nenhum cenário gera OS ou executa worker.
 
 ## Organização e leitura
 
-A estrutura adapta a separação de projeto, módulo e testes para uma entrega documental:
+Os cenários funcionais de Gestão de Serviços estão em bvapp/servicos/tests/cenarios/, um arquivo Markdown por cenário. Essa pasta corresponde à finalidade de functional_tests/ no exemplo da Aula 06.
 
 ```text
 README.md
