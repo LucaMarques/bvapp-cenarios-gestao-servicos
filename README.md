@@ -6,15 +6,7 @@
 **Atividade:** N3 — mini projeto individual  
 **Entrega e apresentação:** 06/11/2026
 
-Esta entrega reúne dez cenários documentais do módulo de Gestão de Serviços do BVapp. Eles descrevem ações e resultados esperados; **nenhum cenário foi executado**. A revisão dos arquivos é uma conferência documental, sem execução de testes do BVapp.
-
-## Fonte e escopo
-
-A fonte normativa é `BVapp_Gestao_Servicos_Ajustada.docx`, fornecido pelo autor, especialmente as seções 1.1.1 a 1.1.7, Regras de dados e tratamento de falhas, Decisões adotadas e evidências no código e Ajustes que ainda faltam no código. A numeração e os IDs do backlog foram preservados. CA e US são identificadores locais à respectiva feature: CA01 de cadastro não é CA01 de consulta.
-
-O DOCX e eventuais planilhas não fazem parte da publicação. As pendências de implementação citadas vêm da análise estática já registrada no DOCX. Não há aplicação, banco de dados, testes automatizados, credenciais ou dados reais neste repositório.
-
-O escopo inclui cadastro, consulta, ordenação, detalhes, edição, remoção, filtros, exportação da lista e PDF individual. Gráficos (1.1.8, Ryan), manutenção de tipos (Thaty) e gestão de OS (Mariana) ficam fora. Tipos, ativos e OS aparecem somente como dados fictícios de apoio às regras do próprio serviço. Nenhum cenário gera OS ou executa worker.
+Esta entrega reúne dez cenários documentais do módulo de Gestão de Serviços do BVapp. Eles descrevem ações e resultados esperados; 
 
 ## Organização e leitura
 
@@ -30,10 +22,6 @@ bvapp/
 docs/
   rastreabilidade.md
 ```
-
-A organização interna dos cenários segue os campos solicitados para o modelo UC001 — Manter produtos da Aula 06.
-
-Comece pelo CT-SER-001 para acompanhar o ID gerado nas quatro operações. Depois leia os cenários do comportamento que deseja conferir e a [matriz de rastreabilidade](docs/rastreabilidade.md). Cada arquivo declara seu próprio estado inicial; não é preciso executar um cenário para preparar outro. Massas e IDs são fictícios e locais a cada arquivo.
 
 ## Índice dos dez cenários
 
@@ -56,4 +44,4 @@ Os IDs CT-SER identificam cenários e não substituem os IDs de backlog. Alterna
 
 - [Rastreabilidade, limites de cobertura e pendências](docs/rastreabilidade.md)
 
-Todos os resultados nos cenários são expectativas para uma execução futura. Um checklist sobre clareza de requisitos não comprova teste aprovado; decisões desta revisão também não representam aprovação já obtida dos stakeholders.
+Todos os resultados nos cenários são expectativas para uma execução futura. Um checklist sobre clareza de requisitos não comprova teste aprovado.
