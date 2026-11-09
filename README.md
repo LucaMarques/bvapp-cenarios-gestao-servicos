@@ -34,8 +34,12 @@ Quando um fluxo precisa alcançar outra função, ele referencia o respectivo ca
 
 ## Fonte e limites
 
-A fonte normativa é BVapp_Gestao_Servicos_Ajustada.docx, seções 1.1.1 a 1.1.7 e regras transversais. O modelo UC001 — Manter produtos e os RF de produtos/garantias servem apenas de formato. Os IDs do backlog são preservados; o PDF individual usa #36153, criado na atualização de 06/11/2026. CA e US continuam locais às respectivas features.
-
 Cada caso declara sua preparação, com massa fictícia e alternativas independentes. Não é necessário executar outro caso para preparar dados. Exemplos de datas e tamanhos de página não impõem novos padrões ao produto. Rótulos não definidos na fonte são descritos por sua finalidade, sem exigir texto literal inventado.
 
-Gráficos de Serviço, manutenção de Tipo de Serviço e manutenção de Ordem de Serviço estão fora. As OS aparecem somente nas relações do serviço, no bloqueio de remoção e na abertura do registro selecionado. Nenhum cenário gera OS ou executa workers. O repositório contém documentação, sem credenciais, dados reais, aplicação ou testes automatizados.
+Os IDs CT-SER identificam cenários e não substituem os IDs de backlog. Alternativas, formatos de arquivo e linhas das tabelas são partes desses dez cenários, sem criar cenários adicionais.
+
+## Material de apoio
+
+- [Rastreabilidade, limites de cobertura e pendências](docs/rastreabilidade.md)
+
+Todos os resultados nos cenários são expectativas para uma execução futura. Um checklist sobre clareza de requisitos não comprova teste aprovado.
