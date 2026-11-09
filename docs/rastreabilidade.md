@@ -1,59 +1,157 @@
 # Rastreabilidade — Gestão de Serviços
 
-**Responsável pela elaboração:** Luca Lopes Marques  
-**Situação:** especificação documental; cenários não executados.
+**Responsável:** Luca Lopes Marques. **Situação:** cenários documentais, não executados.
 
-## Origem das referências
+## Fonte e escopo
 
-Fonte: `BVapp_Gestao_Servicos_Ajustada.docx`, disponibilizado pelo autor e lido em 05/11/2026. O arquivo não é publicado. A matriz usa exatamente as nove features de 1.1.1 a 1.1.7; identificadores CA/US valem apenas dentro da seção indicada. Intervalos, como CA01–CA04, incluem todos os identificadores entre os extremos.
+A fonte normativa é o DOCX BVapp_Gestao_Servicos_Ajustada, seções 1.1.1 a 1.1.7 e regras transversais. Os RF locais reorganizam as funções para leitura, sem substituir CA, US ou IDs do backlog. CA01/US01 são locais a cada feature. Os requisitos do exemplo de produtos e garantias foram usados apenas como modelo de redação.
 
-As referências aos critérios vêm dos blocos `.1. CA` de cada feature. As US vêm dos blocos intitulados US01, US02 etc. dentro da mesma feature. A US01 de cadastro, por exemplo, está em 1.1.1.1.3; as US não devem ser renumeradas a partir do número do cenário.
+A feature de PDF individual foi criada no OpenProject como #36153 na atualização registrada em 06/11/2026. Esse número substitui nesta documentação a indicação histórica de ausência de ID; não se usa NOVO-3.1.10 como ID definitivo. O número não é o ID de um serviço da aplicação.
 
-## Nove features e cobertura especificada
+## Responsabilidade dos casos de uso
 
-“Cobertura” significa comportamentos previstos no texto dos cenários, sem afirmar implementação ou aprovação em execução. Mesmo quando todos os CA são referenciados, não se presume cobertura exaustiva de combinações, fronteiras e falhas.
+| UC | Verificação concentrada | Referência anterior consolidada |
+| --- | --- | --- |
+| [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | Cadastro, edição, status, auditoria, vínculos e remoção | CT-SER-001; complementação do antigo CA11 de edição |
+| [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | Lista, atualização da resposta, cinco colunas nos dois sentidos e paginação | CT-SER-002 e CT-SER-003 |
+| [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | Busca, filtros isolados/combinados, datas e limpeza | CT-SER-004 e CT-SER-005 |
+| [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | Detalhes, próxima execução, ativos, OS e navegação | CT-SER-006 e CT-SER-007 |
+| [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | Exportação de lista em PDF/CSV | CT-SER-008 |
+| [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | PDF individual | CT-SER-009 |
+| [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | Autenticação e permissão por rota | CT-SER-010 e negativas antes dispersas |
 
-| Feature / seção | Backlog | Cenários e CA/US efetivamente usados | Limite de cobertura |
+Abrir uma consulta para alcançar uma edição não repete o teste da listagem. Conferir que uma exportação preservou filtros não repete os controles de filtro. Arquivos que dependem de cálculo ou autorização referenciam seu responsável, sem criar outro caso equivalente. PDF e CSV são alternativas do mesmo caso de exportação.
+
+## Cobertura dos 76 CA
+
+Cada critério tem um responsável primário na tabela; referências transversais não criam cópias de cenários. A cobertura é documental: comportamentos positivos, negativos e caminhos alternativos previstos. Não equivale a teste executado nem exaure combinações arbitrárias de entradas.
+
+| Feature / backlog | RF | CA | UC responsável | Fluxos ou regras |
+| --- | --- | --- | --- | --- |
+| 1.1.1.1 / 24078 | RF001 | CA01 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP |
+| 1.1.1.1 / 24078 | RF001 | CA02 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP, A2, RN1 |
+| 1.1.1.1 / 24078 | RF001 | CA03 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A4, RN2 |
+| 1.1.1.1 / 24078 | RF001 | CA04 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A2 |
+| 1.1.1.1 / 24078 | RF001 | CA05 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP |
+| 1.1.1.1 / 24078 | RF001 | CA06 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP, A5 |
+| 1.1.1.1 / 24078 | RF001 | CA07 | [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | A1, A2, A3 |
+| 1.1.1.1 / 24078 | RF001 | CA08 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP |
+| 1.1.1.1 / 24078 | RF001 | CA09 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A5 |
+| 1.1.1.1 / 24078 | RF001 | CA10 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A3 |
+| 1.1.1.1 / 24078 | RF001 | CA11 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A2 |
+| 1.1.1.1 / 24078 | RF001 | CA12 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP |
+| 1.1.1.1 / 24078 | RF001 | CA13 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A2, A3, RN1, RN2, RN3 |
+| 1.1.1.1 / 24078 | RF001 | CA14 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A4, RN3 |
+| 1.1.2.1 / 24115 | RF002 | CA01 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP, A2, A4 |
+| 1.1.2.1 / 24115 | RF002 | CA02 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP |
+| 1.1.2.1 / 24115 | RF002 | CA03 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP |
+| 1.1.2.1 / 24115 | RF002 | CA04 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP |
+| 1.1.2.1 / 24115 | RF002 | CA05 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | A2, A3 |
+| 1.1.2.2 / 24147 | RF003 | CA01 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP, A1 |
+| 1.1.2.2 / 24147 | RF003 | CA02 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | A1 |
+| 1.1.2.2 / 24147 | RF003 | CA03 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | A1 |
+| 1.1.2.2 / 24147 | RF003 | CA04 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP, A1 |
+| 1.1.3.1 / 24170 | RF004 | CA01 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP |
+| 1.1.3.1 / 24170 | RF004 | CA02 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A1, RN2 |
+| 1.1.3.1 / 24170 | RF004 | CA03 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A2 |
+| 1.1.3.1 / 24170 | RF004 | CA04 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP |
+| 1.1.3.1 / 24170 | RF004 | CA05 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A2 |
+| 1.1.3.1 / 24170 | RF004 | CA06 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A2 |
+| 1.1.3.1 / 24170 | RF004 | CA07 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | A2, A4 |
+| 1.1.4.1 / 24186 | RF005 | CA01 | [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | A1, A2, A3 |
+| 1.1.4.1 / 24186 | RF005 | CA02 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6, A7, A9 |
+| 1.1.4.1 / 24186 | RF005 | CA03 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6 |
+| 1.1.4.1 / 24186 | RF005 | CA04 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6, A7 |
+| 1.1.4.1 / 24186 | RF005 | CA05 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6, A9 |
+| 1.1.4.1 / 24186 | RF005 | CA06 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A10 |
+| 1.1.4.1 / 24186 | RF005 | CA07 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6, A7, A9, A10, RN4 |
+| 1.1.4.1 / 24186 | RF005 | CA08 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A9 |
+| 1.1.4.1 / 24186 | RF005 | CA09 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A7 |
+| 1.1.4.1 / 24186 | RF005 | CA10 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A7 |
+| 1.1.4.1 / 24186 | RF005 | CA11 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A8 |
+| 1.1.4.1 / 24186 | RF005 | CA12 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A10 |
+| 1.1.5.1 / 24211 | RF006 | CA01 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A11 |
+| 1.1.5.1 / 24211 | RF006 | CA02 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A11 |
+| 1.1.5.1 / 24211 | RF006 | CA03 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A11 |
+| 1.1.5.1 / 24211 | RF006 | CA04 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A12 |
+| 1.1.5.1 / 24211 | RF006 | CA05 | [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | A1, A2, A3 |
+| 1.1.5.1 / 24211 | RF006 | CA06 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A11 |
+| 1.1.5.1 / 24211 | RF006 | CA07 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A11 |
+| 1.1.5.1 / 24211 | RF006 | CA08 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A12 |
+| 1.1.6.1 / 24232 | RF007 | CA01 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP |
+| 1.1.6.1 / 24232 | RF007 | CA02 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | A1 |
+| 1.1.6.1 / 24232 | RF007 | CA03 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | A2 |
+| 1.1.6.1 / 24232 | RF007 | CA04 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | A2, A3 |
+| 1.1.6.1 / 24232 | RF007 | CA05 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP |
+| 1.1.6.1 / 24232 | RF007 | CA06 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP, A1, A2 |
+| 1.1.6.1 / 24232 | RF007 | CA07 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP, A2 |
+| 1.1.6.1 / 24232 | RF007 | CA08 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP |
+| 1.1.6.1 / 24232 | RF007 | CA09 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | A1, A2, RN1, RN2 |
+| 1.1.7.1 / 24304 | RF008 | CA01 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP |
+| 1.1.7.1 / 24304 | RF008 | CA02 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP |
+| 1.1.7.1 / 24304 | RF008 | CA03 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP |
+| 1.1.7.1 / 24304 | RF008 | CA04 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP, A1 |
+| 1.1.7.1 / 24304 | RF008 | CA05 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP, A2 |
+| 1.1.7.1 / 24304 | RF008 | CA06 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP |
+| 1.1.7.1 / 24304 | RF008 | CA07 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP |
+| 1.1.7.1 / 24304 | RF008 | CA08 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | A3 |
+| 1.1.7.1 / 24304 | RF008 | CA09 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP, RN1 |
+| 1.1.7.1 / 24304 | RF008 | CA10 | [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | FP, A2, A3 |
+| 1.1.7.1 / 24304 | RF008 | CA11 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | A4 |
+| 1.1.7.2 / 36153 | RF009 | CA01 | [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | FP, A2, A3 |
+| 1.1.7.2 / 36153 | RF009 | CA02 | [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | A2 |
+| 1.1.7.2 / 36153 | RF009 | CA03 | [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | FP |
+| 1.1.7.2 / 36153 | RF009 | CA04 | [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | FP, A1 |
+| 1.1.7.2 / 36153 | RF009 | CA05 | [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | A2, A3 |
+| 1.1.7.2 / 36153 | RF009 | CA06 | [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | FP, A1, RN1 |
+
+RF010 é transversal às nove features; sua verificação é concentrada no UC007.
+
+## Cobertura das 24 US
+
+| Feature | US local | UC | Fluxos |
 | --- | --- | --- | --- |
-| Cadastro / 1.1.1.1 | 24078 | [001](../bvapp/servicos/tests/cenarios/CT-SER-001.md): CA01–CA14; US01–US03 | Parcial: exemplos de obrigatoriedade, normalização, duplicidade, período, vínculos, autorização e falha; não exaure combinações ou fronteiras de entrada. |
-| Consulta / 1.1.2.1 | 24115 | [001](../bvapp/servicos/tests/cenarios/CT-SER-001.md): CA01, CA02, CA04; US01. [002](../bvapp/servicos/tests/cenarios/CT-SER-002.md): CA01–CA05; US01. [010](../bvapp/servicos/tests/cenarios/CT-SER-010.md): CA03; US01, foco em permissão. | Campos, exclusão, resposta atual, vazio, falha e autorização especificados; sem execução. |
-| Ordenação / 1.1.2.2 | 24147 | [003](../bvapp/servicos/tests/cenarios/CT-SER-003.md): CA01–CA04; US01, US02. [008](../bvapp/servicos/tests/cenarios/CT-SER-008.md): CA01–CA03; US01, US02, uso de nome nos dois sentidos. | Parcial: nome e início com paginação; não exercita colunas tipo, periodicidade e status. |
-| Detalhes / 1.1.3.1 | 24170 | [001](../bvapp/servicos/tests/cenarios/CT-SER-001.md): CA01–CA03, CA07; US01. [006](../bvapp/servicos/tests/cenarios/CT-SER-006.md): CA01–CA07; US01–US04. [007](../bvapp/servicos/tests/cenarios/CT-SER-007.md): CA02, CA03; US01, foco em cálculo. [010](../bvapp/servicos/tests/cenarios/CT-SER-010.md): US01, foco em permissão. | Campos, vínculos, navegação, cálculo e falhas descritos; sem manutenção de OS/ativos. |
-| Edição / 1.1.4.1 | 24186 | [001](../bvapp/servicos/tests/cenarios/CT-SER-001.md): CA01–CA10, CA12; US01–US04 | Parcial: não verifica CA11, reflexo de alterações dos vínculos atuais nas consultas das OS e preservação de seus demais campos. Sem alterar módulo de OS. |
-| Remoção / 1.1.5.1 | 24211 | [001](../bvapp/servicos/tests/cenarios/CT-SER-001.md): CA01–CA08; US01, US02 | Confirmação, cancelamento, exclusão lógica e bloqueio por OS de qualquer estado descritos. |
-| Filtragem / 1.1.6.1 | 24232 | [004](../bvapp/servicos/tests/cenarios/CT-SER-004.md): CA01, CA02, CA05–CA09; US01, US03–US05; orientação após US05. [005](../bvapp/servicos/tests/cenarios/CT-SER-005.md): CA01, CA03, CA04, CA06–CA09; US02, US04, US05. [008](../bvapp/servicos/tests/cenarios/CT-SER-008.md): CA01, CA06, CA07, CA09; US05, uso de status e período. | Busca, igualdade, interseção, limpeza e datas descritas; combinações possíveis não são exauridas. |
-| Exportação da lista / 1.1.7.1 | 24304 | [008](../bvapp/servicos/tests/cenarios/CT-SER-008.md): CA01–CA11; US01, US02. [010](../bvapp/servicos/tests/cenarios/CT-SER-010.md): CA10; US02, foco em permissão. | Dois formatos, todos os resultados, ordem, campos, nome UTC, vazio, falha e autorização especificados; sem exigir layout visual não definido. |
-| PDF individual / 1.1.7.2 | Sem ID definitivo | [009](../bvapp/servicos/tests/cenarios/CT-SER-009.md): CA01–CA06; US01. [010](../bvapp/servicos/tests/cenarios/CT-SER-010.md): CA01; US01, foco em permissão. | Exclusividade, campos, relações, nome, ausências, falha e autorização especificados. NOVO-3.1.10 é referência histórica, sem substituir ID definitivo. |
+| 1.1.1.1 | US01 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | FP, A2–A5 |
+| 1.1.1.1 | US02 | [UC007](../bvapp/servicos/tests/cenarios/UC007.md) | A1–A3 |
+| 1.1.1.1 | US03 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A5 |
+| 1.1.2.1 | US01 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | FP |
+| 1.1.2.2 | US01 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | A1 |
+| 1.1.2.2 | US02 | [UC002](../bvapp/servicos/tests/cenarios/UC002.md) | A1 |
+| 1.1.3.1 | US01 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A1, A2, A4 |
+| 1.1.3.1 | US02 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A2, A4 |
+| 1.1.3.1 | US03 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A2, A4 |
+| 1.1.3.1 | US04 | [UC004](../bvapp/servicos/tests/cenarios/UC004.md) | FP, A3, A4 |
+| 1.1.4.1 | US01 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6 |
+| 1.1.4.1 | US02 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A6–A8, A10 |
+| 1.1.4.1 | US03 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A10 |
+| 1.1.4.1 | US04 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A9 |
+| 1.1.5.1 | US01 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A11–A13 |
+| 1.1.5.1 | US02 | [UC001](../bvapp/servicos/tests/cenarios/UC001.md) | A12 |
+| 1.1.6.1 | US01 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | A1 |
+| 1.1.6.1 | US02 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | A2, A3 |
+| 1.1.6.1 | US03 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP |
+| 1.1.6.1 | US04 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP |
+| 1.1.6.1 | US05 | [UC003](../bvapp/servicos/tests/cenarios/UC003.md) | FP, A2 |
+| 1.1.7.1 | US01 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | FP, A1, A2 |
+| 1.1.7.1 | US02 | [UC005](../bvapp/servicos/tests/cenarios/UC005.md) | A3, A4; autorização em UC007 |
+| 1.1.7.2 | US01 | [UC006](../bvapp/servicos/tests/cenarios/UC006.md) | FP, A1–A3 |
 
-## Regras transversais usadas
+## Regras transversais e rotas
 
-| Bloco do DOCX | Aplicação |
-| --- | --- |
-| Autorização | 001, 002, 004, 006, 007, 008, 009 e 010: autenticação e permissão efetiva da operação; 003 e 005 usam SERVICO_LISTAR. |
-| Nome e descrição; Tipo e ativos; Periodicidade | 001: validação e manutenção; 002/004/008/009: dias e dados de consulta. |
-| Datas e próxima execução | 001, 005, 006, 007, 008 e 009: datas independentes, cálculo único, ausência e formatos. |
-| Edição e auditoria | 001: campos omitidos, valores nulos, vínculos por ID, registro de mudanças efetivas. |
-| Resultados vazios e falhas | 001, 002, 004, 005, 006, 008 e 009: resultado vazio, erro, não encontrado e sucesso confirmado. |
-| Exportações | 008 e 009: conjunto exportado, campos, delimitador, nomes e datas. |
+- Nome, descrição, tipo, ativos, periodicidade, datas de cadastro, edição e auditoria: UC001, RN1–RN5.
+- Resposta atual, lista vazia, ordenação global e paginação: UC002.
+- Interseção, unidades e limites temporais: UC003, RN1/RN2.
+- Identidade, relações não excluídas e cálculo único: UC004, RN1/RN2.
+- Campos, nomes de arquivos, UTC, formatos e bloqueio de arquivo incompleto: UC005/UC006.
+- Permissões efetivas e acesso direto: UC007, RN1.
+- Os 11 pares método/rota do backend de serviços em escopo e os dois GET de OS usados como vínculos estão em [rotas.md](rotas.md). A página, os Route Handlers e o backend são distinguidos nesse mapa.
 
-## Decisões já resolvidas
+## Pendências e limites de implementação
 
-- Qualquer OS vinculada bloqueia exclusão, inclusive cancelada ou excluída logicamente. Origem: 1.1.5.1 CA08 e Decisões adotadas — Permissões e exclusão. Consulta de OS pode omitir excluídas; bloqueio de remoção não as ignora.
-- A coluna e o filtro usam data de início; criação é um instante separado. Origem: 1.1.2.2 CA01, 1.1.6.1 CA03 e Decisões adotadas — Data dos filtros e próxima execução.
-- Próxima execução usa última realização ou, na ausência, início, mais dias corridos. Origem: Regras de dados — Datas e próxima execução.
-- Permissão efetiva substitui inferência pelo nome de perfil. Origem: Regras de dados — Autorização.
+Os resultados dos fluxos são expectativas. A inspeção local nesta atualização identificou caminhos e parâmetros, sem executar o sistema e sem alterar backend/frontend. Alguns comportamentos exigidos pela revisão ainda dependem de implementação: consistência das validações, IDs de vínculos, datas UTC e próxima execução, auditoria, filtragem de relações excluídas, dias na interface de filtro e envio de ordenação/nome UTC na exportação.
 
-## Pendências de implementação registradas pela fonte
+O backend possui PATCH de status e GET de ativos; o frontend examinado atualiza pelo formulário e carrega ativos pela resposta do detalhe. A navegação para OS deve preservar o ID selecionado mesmo se seu controle ainda não estiver concluído. Os cenários descrevem o resultado exigido, sem declarar que essas funções estão prontas.
 
-As notas abaixo resumem “Ajustes que ainda faltam no código” e “Decisões adotadas e evidências no código” do DOCX. São diferenças conhecidas pela análise estática anterior, **não falhas observadas nesta entrega**:
+Manutenção de OS (Mariana), tipos de serviço (Thaty), gráficos (Ryan), geração automática e workers ficam fora. Tipos/ativos são dados de apoio já preparados. Leitura de OS neste conjunto serve apenas aos vínculos de serviços. Não houve alteração do OpenProject, publicação, commit ou envio de mensagens nesta revisão dos arquivos.
 
-| Pendência relevante | Expectativa afetada |
-| --- | --- |
-| Uniformizar trim, limites de nome, validação de tipos/ativos/IDs repetidos, recorrência positiva e preservação de IDs | 001 |
-| Unificar fórmula de próxima execução, data padrão UTC, created_at no detalhe e auditoria | 001, 006, 007, 008, 009 |
-| Harmonizar exclusão em relações aninhadas, rejeitar intervalos invertidos e padronizar dias | 001, 002, 004, 005, 006, 008, 009 |
-| Enviar ordenação ao exportar lista e incluir instante UTC no nome; conferir template individual não recebido na análise original | 008, 009 |
-| Concluir navegação para a OS selecionada | 006 |
-| Registrar no dotProject complementos sem ID definitivo | 1.1.7.2; não inventar ID |
-
-As referências a rotas, schemas e exportadores no DOCX são evidências da revisão anterior. Não foi feita nova inspeção desses arquivos nem execução do sistema. Pendências de gráficos ficam fora desta entrega.
+O arquivo [cobertura.json](cobertura.json) contém os vínculos estruturados para conferência de completude.

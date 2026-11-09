@@ -1,59 +1,41 @@
-# BVapp — Cenários de Gestão de Serviços
+# BVapp — Casos de uso de Gestão de Serviços
 
 **Autor:** Luca Lopes Marques  
 **Instituição:** Instituto Federal da Paraíba — IFPB  
-**Disciplina:** Verificação, Validação e Testes de Software  
-**Atividade:** N3 — mini projeto individual  
-**Entrega e apresentação:** 06/11/2026
+**Disciplina:** Verificação, Validação e Testes de Software
 
-Esta entrega reúne dez cenários documentais do módulo de Gestão de Serviços do BVapp. Eles descrevem ações e resultados esperados; **nenhum cenário foi executado**. A revisão dos arquivos é uma conferência documental, sem execução de testes do BVapp.
+Sete casos de uso documentam os requisitos de Gestão de Serviços, sem repetir cenários equivalentes para completar uma quantidade. Cada arquivo segue o padrão Objetivo, Requisitos, Ator, fluxo principal [FP], alternativas [A1]... e regras [RN1]..., com narrativa de ações do ator e respostas esperadas do sistema.
 
-## Fonte e escopo
+Os arquivos descrevem expectativas para execução futura. Nenhum cenário foi executado no BVapp e a revisão documental não comprova implementação concluída ou aprovação de stakeholders.
 
-A fonte normativa é `BVapp_Gestao_Servicos_Ajustada.docx`, fornecido pelo autor, especialmente as seções 1.1.1 a 1.1.7, Regras de dados e tratamento de falhas, Decisões adotadas e evidências no código e Ajustes que ainda faltam no código. A numeração e os IDs do backlog foram preservados. CA e US são identificadores locais à respectiva feature: CA01 de cadastro não é CA01 de consulta.
+## Requisitos
 
-O DOCX e eventuais planilhas não fazem parte da publicação. As pendências de implementação citadas vêm da análise estática já registrada no DOCX. Não há aplicação, banco de dados, testes automatizados, credenciais ou dados reais neste repositório.
+Os dez requisitos locais estão em [requisitos/requisitos-funcionais.md](requisitos/requisitos-funcionais.md), no formato de histórias de usuário. Contêm objetivos e dados dos formulários; as validações e alternativas detalhadas ficam nos cenários. RF001 a RF010 identificam requisitos desta documentação, não os RF do exemplo de produtos e garantias.
 
-O escopo inclui cadastro, consulta, ordenação, detalhes, edição, remoção, filtros, exportação da lista e PDF individual. Gráficos (1.1.8, Ryan), manutenção de tipos (Thaty) e gestão de OS (Mariana) ficam fora. Tipos, ativos e OS aparecem somente como dados fictícios de apoio às regras do próprio serviço. Nenhum cenário gera OS ou executa worker.
+## Casos de uso
 
-## Organização e leitura
+| Caso | Objetivo | Requisitos |
+| --- | --- | --- |
+| [UC001 — Manter serviços](bvapp/servicos/tests/cenarios/UC001.md) | Cadastrar, editar, tratar vínculos, alterar status e remover | RF001, RF005, RF006 |
+| [UC002 — Consultar e ordenar](bvapp/servicos/tests/cenarios/UC002.md) | Listar e ordenar pelas cinco colunas antes da paginação | RF002, RF003 |
+| [UC003 — Buscar e filtrar](bvapp/servicos/tests/cenarios/UC003.md) | Combinar busca e filtros, validar intervalos e limpar | RF007 |
+| [UC004 — Visualizar serviço e relações](bvapp/servicos/tests/cenarios/UC004.md) | Detalhes, próxima execução, ativos, OS e abertura do ID escolhido | RF004 |
+| [UC005 — Exportar lista](bvapp/servicos/tests/cenarios/UC005.md) | PDF e CSV do conjunto filtrado e ordenado | RF008 |
+| [UC006 — Exportar individual](bvapp/servicos/tests/cenarios/UC006.md) | PDF exclusivo de um serviço e suas relações | RF009 |
+| [UC007 — Controlar acesso](bvapp/servicos/tests/cenarios/UC007.md) | Autenticação e permissão efetiva para cada operação | RF010 |
 
-Os cenários funcionais de Gestão de Serviços estão em bvapp/servicos/tests/cenarios/, um arquivo Markdown por cenário. Essa pasta corresponde à finalidade de functional_tests/ no exemplo da Aula 06.
+## Cobertura e rotas
 
-```text
-README.md
-bvapp/
-  servicos/
-    tests/
-      cenarios/
-        CT-SER-001.md ... CT-SER-010.md
-docs/
-  rastreabilidade.md
-```
+- [Rastreabilidade](docs/rastreabilidade.md): nove features, 76 CA, 24 US e responsável primário por verificação.
+- [Mapa de rotas](docs/rotas.md): página `/servicos`, caminhos do frontend e métodos/endpoints do backend, com os fluxos que os cobrem.
+- [Cobertura estruturada](docs/cobertura.json): referências para conferência documental.
 
-A organização interna dos cenários segue os campos solicitados para o modelo UC001 — Manter produtos da Aula 06.
+Quando um fluxo precisa alcançar outra função, ele referencia o respectivo caso em vez de copiar suas verificações. PDF/CSV, sentidos de ordenação e variações de entrada são alternativas parametrizadas, sem arquivos duplicados.
 
-Comece pelo CT-SER-001 para acompanhar o ID gerado nas quatro operações. Depois leia os cenários do comportamento que deseja conferir e a [matriz de rastreabilidade](docs/rastreabilidade.md). Cada arquivo declara seu próprio estado inicial; não é preciso executar um cenário para preparar outro. Massas e IDs são fictícios e locais a cada arquivo.
+## Fonte e limites
 
-## Índice dos dez cenários
+A fonte normativa é BVapp_Gestao_Servicos_Ajustada.docx, seções 1.1.1 a 1.1.7 e regras transversais. O modelo UC001 — Manter produtos e os RF de produtos/garantias servem apenas de formato. Os IDs do backlog são preservados; o PDF individual usa #36153, criado na atualização de 06/11/2026. CA e US continuam locais às respectivas features.
 
-| Cenário | Objetivo principal |
-| --- | --- |
-| [CT-SER-001](bvapp/servicos/tests/cenarios/CT-SER-001.md) | Manter serviço em um fluxo CRUD completo |
-| [CT-SER-002](bvapp/servicos/tests/cenarios/CT-SER-002.md) | Consultar registros e campos da lista |
-| [CT-SER-003](bvapp/servicos/tests/cenarios/CT-SER-003.md) | Ordenar o conjunto antes de paginar |
-| [CT-SER-004](bvapp/servicos/tests/cenarios/CT-SER-004.md) | Buscar e combinar filtros por interseção |
-| [CT-SER-005](bvapp/servicos/tests/cenarios/CT-SER-005.md) | Filtrar início e última realização |
-| [CT-SER-006](bvapp/servicos/tests/cenarios/CT-SER-006.md) | Consultar detalhes, ativos e OS vinculadas |
-| [CT-SER-007](bvapp/servicos/tests/cenarios/CT-SER-007.md) | Conferir próxima execução calculada |
-| [CT-SER-008](bvapp/servicos/tests/cenarios/CT-SER-008.md) | Exportar toda a lista em CSV e PDF |
-| [CT-SER-009](bvapp/servicos/tests/cenarios/CT-SER-009.md) | Exportar somente o serviço escolhido em PDF |
-| [CT-SER-010](bvapp/servicos/tests/cenarios/CT-SER-010.md) | Distinguir permissões efetivas de leitura |
+Cada caso declara sua preparação, com massa fictícia e alternativas independentes. Não é necessário executar outro caso para preparar dados. Exemplos de datas e tamanhos de página não impõem novos padrões ao produto. Rótulos não definidos na fonte são descritos por sua finalidade, sem exigir texto literal inventado.
 
-Os IDs CT-SER identificam cenários e não substituem os IDs de backlog. Alternativas, formatos de arquivo e linhas das tabelas são partes desses dez cenários, sem criar cenários adicionais.
-
-## Material de apoio
-
-- [Rastreabilidade, limites de cobertura e pendências](docs/rastreabilidade.md)
-
-Todos os resultados nos cenários são expectativas para uma execução futura. Um checklist sobre clareza de requisitos não comprova teste aprovado; decisões desta revisão também não representam aprovação já obtida dos stakeholders.
+Gráficos de Serviço, manutenção de Tipo de Serviço e manutenção de Ordem de Serviço estão fora. As OS aparecem somente nas relações do serviço, no bloqueio de remoção e na abertura do registro selecionado. Nenhum cenário gera OS ou executa workers. O repositório contém documentação, sem credenciais, dados reais, aplicação ou testes automatizados.

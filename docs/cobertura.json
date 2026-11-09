@@ -1,0 +1,832 @@
+{
+  "criteria": [
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA01",
+      "scenario": "UC001",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA02",
+      "scenario": "UC001",
+      "flows": "FP, A2, RN1"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA03",
+      "scenario": "UC001",
+      "flows": "A4, RN2"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA04",
+      "scenario": "UC001",
+      "flows": "A2"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA05",
+      "scenario": "UC001",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA06",
+      "scenario": "UC001",
+      "flows": "FP, A5"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA07",
+      "scenario": "UC007",
+      "flows": "A1, A2, A3"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA08",
+      "scenario": "UC001",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA09",
+      "scenario": "UC001",
+      "flows": "A5"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA10",
+      "scenario": "UC001",
+      "flows": "A3"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA11",
+      "scenario": "UC001",
+      "flows": "A2"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA12",
+      "scenario": "UC001",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA13",
+      "scenario": "UC001",
+      "flows": "A2, A3, RN1, RN2, RN3"
+    },
+    {
+      "feature": "1.1.1.1",
+      "backlog": 24078,
+      "requirement": "RF001",
+      "ca": "CA14",
+      "scenario": "UC001",
+      "flows": "A4, RN3"
+    },
+    {
+      "feature": "1.1.2.1",
+      "backlog": 24115,
+      "requirement": "RF002",
+      "ca": "CA01",
+      "scenario": "UC002",
+      "flows": "FP, A2, A4"
+    },
+    {
+      "feature": "1.1.2.1",
+      "backlog": 24115,
+      "requirement": "RF002",
+      "ca": "CA02",
+      "scenario": "UC002",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.2.1",
+      "backlog": 24115,
+      "requirement": "RF002",
+      "ca": "CA03",
+      "scenario": "UC002",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.2.1",
+      "backlog": 24115,
+      "requirement": "RF002",
+      "ca": "CA04",
+      "scenario": "UC002",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.2.1",
+      "backlog": 24115,
+      "requirement": "RF002",
+      "ca": "CA05",
+      "scenario": "UC002",
+      "flows": "A2, A3"
+    },
+    {
+      "feature": "1.1.2.2",
+      "backlog": 24147,
+      "requirement": "RF003",
+      "ca": "CA01",
+      "scenario": "UC002",
+      "flows": "FP, A1"
+    },
+    {
+      "feature": "1.1.2.2",
+      "backlog": 24147,
+      "requirement": "RF003",
+      "ca": "CA02",
+      "scenario": "UC002",
+      "flows": "A1"
+    },
+    {
+      "feature": "1.1.2.2",
+      "backlog": 24147,
+      "requirement": "RF003",
+      "ca": "CA03",
+      "scenario": "UC002",
+      "flows": "A1"
+    },
+    {
+      "feature": "1.1.2.2",
+      "backlog": 24147,
+      "requirement": "RF003",
+      "ca": "CA04",
+      "scenario": "UC002",
+      "flows": "FP, A1"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA01",
+      "scenario": "UC004",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA02",
+      "scenario": "UC004",
+      "flows": "FP, A1, RN2"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA03",
+      "scenario": "UC004",
+      "flows": "FP, A2"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA04",
+      "scenario": "UC004",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA05",
+      "scenario": "UC004",
+      "flows": "FP, A2"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA06",
+      "scenario": "UC004",
+      "flows": "FP, A2"
+    },
+    {
+      "feature": "1.1.3.1",
+      "backlog": 24170,
+      "requirement": "RF004",
+      "ca": "CA07",
+      "scenario": "UC004",
+      "flows": "A2, A4"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA01",
+      "scenario": "UC007",
+      "flows": "A1, A2, A3"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA02",
+      "scenario": "UC001",
+      "flows": "A6, A7, A9"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA03",
+      "scenario": "UC001",
+      "flows": "A6"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA04",
+      "scenario": "UC001",
+      "flows": "A6, A7"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA05",
+      "scenario": "UC001",
+      "flows": "A6, A9"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA06",
+      "scenario": "UC001",
+      "flows": "A10"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA07",
+      "scenario": "UC001",
+      "flows": "A6, A7, A9, A10, RN4"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA08",
+      "scenario": "UC001",
+      "flows": "A9"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA09",
+      "scenario": "UC001",
+      "flows": "A7"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA10",
+      "scenario": "UC001",
+      "flows": "A7"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA11",
+      "scenario": "UC001",
+      "flows": "A8"
+    },
+    {
+      "feature": "1.1.4.1",
+      "backlog": 24186,
+      "requirement": "RF005",
+      "ca": "CA12",
+      "scenario": "UC001",
+      "flows": "A10"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA01",
+      "scenario": "UC001",
+      "flows": "A11"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA02",
+      "scenario": "UC001",
+      "flows": "A11"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA03",
+      "scenario": "UC001",
+      "flows": "A11"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA04",
+      "scenario": "UC001",
+      "flows": "A12"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA05",
+      "scenario": "UC007",
+      "flows": "A1, A2, A3"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA06",
+      "scenario": "UC001",
+      "flows": "A11"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA07",
+      "scenario": "UC001",
+      "flows": "A11"
+    },
+    {
+      "feature": "1.1.5.1",
+      "backlog": 24211,
+      "requirement": "RF006",
+      "ca": "CA08",
+      "scenario": "UC001",
+      "flows": "A12"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA01",
+      "scenario": "UC003",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA02",
+      "scenario": "UC003",
+      "flows": "A1"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA03",
+      "scenario": "UC003",
+      "flows": "A2"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA04",
+      "scenario": "UC003",
+      "flows": "A2, A3"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA05",
+      "scenario": "UC003",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA06",
+      "scenario": "UC003",
+      "flows": "FP, A1, A2"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA07",
+      "scenario": "UC003",
+      "flows": "FP, A2"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA08",
+      "scenario": "UC003",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.6.1",
+      "backlog": 24232,
+      "requirement": "RF007",
+      "ca": "CA09",
+      "scenario": "UC003",
+      "flows": "A1, A2, RN1, RN2"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA01",
+      "scenario": "UC005",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA02",
+      "scenario": "UC005",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA03",
+      "scenario": "UC005",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA04",
+      "scenario": "UC005",
+      "flows": "FP, A1"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA05",
+      "scenario": "UC005",
+      "flows": "FP, A2"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA06",
+      "scenario": "UC005",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA07",
+      "scenario": "UC005",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA08",
+      "scenario": "UC005",
+      "flows": "A3"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA09",
+      "scenario": "UC005",
+      "flows": "FP, RN1"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA10",
+      "scenario": "UC007",
+      "flows": "FP, A2, A3"
+    },
+    {
+      "feature": "1.1.7.1",
+      "backlog": 24304,
+      "requirement": "RF008",
+      "ca": "CA11",
+      "scenario": "UC005",
+      "flows": "A4"
+    },
+    {
+      "feature": "1.1.7.2",
+      "backlog": 36153,
+      "requirement": "RF009",
+      "ca": "CA01",
+      "scenario": "UC007",
+      "flows": "FP, A2, A3"
+    },
+    {
+      "feature": "1.1.7.2",
+      "backlog": 36153,
+      "requirement": "RF009",
+      "ca": "CA02",
+      "scenario": "UC006",
+      "flows": "A2"
+    },
+    {
+      "feature": "1.1.7.2",
+      "backlog": 36153,
+      "requirement": "RF009",
+      "ca": "CA03",
+      "scenario": "UC006",
+      "flows": "FP"
+    },
+    {
+      "feature": "1.1.7.2",
+      "backlog": 36153,
+      "requirement": "RF009",
+      "ca": "CA04",
+      "scenario": "UC006",
+      "flows": "FP, A1"
+    },
+    {
+      "feature": "1.1.7.2",
+      "backlog": 36153,
+      "requirement": "RF009",
+      "ca": "CA05",
+      "scenario": "UC006",
+      "flows": "A2, A3"
+    },
+    {
+      "feature": "1.1.7.2",
+      "backlog": 36153,
+      "requirement": "RF009",
+      "ca": "CA06",
+      "scenario": "UC006",
+      "flows": "FP, A1, RN1"
+    }
+  ],
+  "stories": {
+    "1.1.1.1": [
+      [
+        "US01",
+        "UC001",
+        "FP, A2–A5"
+      ],
+      [
+        "US02",
+        "UC007",
+        "A1–A3"
+      ],
+      [
+        "US03",
+        "UC001",
+        "A5"
+      ]
+    ],
+    "1.1.2.1": [
+      [
+        "US01",
+        "UC002",
+        "FP"
+      ]
+    ],
+    "1.1.2.2": [
+      [
+        "US01",
+        "UC002",
+        "A1"
+      ],
+      [
+        "US02",
+        "UC002",
+        "A1"
+      ]
+    ],
+    "1.1.3.1": [
+      [
+        "US01",
+        "UC004",
+        "FP, A1, A2, A4"
+      ],
+      [
+        "US02",
+        "UC004",
+        "FP, A2, A4"
+      ],
+      [
+        "US03",
+        "UC004",
+        "FP, A2, A4"
+      ],
+      [
+        "US04",
+        "UC004",
+        "FP, A3, A4"
+      ]
+    ],
+    "1.1.4.1": [
+      [
+        "US01",
+        "UC001",
+        "A6"
+      ],
+      [
+        "US02",
+        "UC001",
+        "A6–A8, A10"
+      ],
+      [
+        "US03",
+        "UC001",
+        "A10"
+      ],
+      [
+        "US04",
+        "UC001",
+        "A9"
+      ]
+    ],
+    "1.1.5.1": [
+      [
+        "US01",
+        "UC001",
+        "A11–A13"
+      ],
+      [
+        "US02",
+        "UC001",
+        "A12"
+      ]
+    ],
+    "1.1.6.1": [
+      [
+        "US01",
+        "UC003",
+        "A1"
+      ],
+      [
+        "US02",
+        "UC003",
+        "A2, A3"
+      ],
+      [
+        "US03",
+        "UC003",
+        "FP"
+      ],
+      [
+        "US04",
+        "UC003",
+        "FP"
+      ],
+      [
+        "US05",
+        "UC003",
+        "FP, A2"
+      ]
+    ],
+    "1.1.7.1": [
+      [
+        "US01",
+        "UC005",
+        "FP, A1, A2"
+      ],
+      [
+        "US02",
+        "UC005",
+        "A3, A4; autorização em UC007"
+      ]
+    ],
+    "1.1.7.2": [
+      [
+        "US01",
+        "UC006",
+        "FP, A1–A3"
+      ]
+    ]
+  },
+  "routes": [
+    {
+      "method": "POST",
+      "backend": "/api/v1/servicos/",
+      "scenario": "UC001",
+      "flows": "FP; A1–A5"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/",
+      "scenario": "UC002",
+      "flows": "A4; A2; A3"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/paginacao",
+      "scenario": "UC002 / UC003",
+      "flows": "UC002 FP/A1–A4; UC003 FP/A1–A4"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/{servico_id}",
+      "scenario": "UC004",
+      "flows": "FP; A1; A2; A4"
+    },
+    {
+      "method": "PUT",
+      "backend": "/api/v1/servicos/{servico_id}",
+      "scenario": "UC001",
+      "flows": "A6–A10"
+    },
+    {
+      "method": "DELETE",
+      "backend": "/api/v1/servicos/{servico_id}",
+      "scenario": "UC001",
+      "flows": "A11–A13"
+    },
+    {
+      "method": "PATCH",
+      "backend": "/api/v1/servicos/{servico_id}/status",
+      "scenario": "UC001",
+      "flows": "A9; A10"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/{servico_id}/ativos",
+      "scenario": "UC004",
+      "flows": "FP; A2; A4"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/{servico_id}/ordens-servico",
+      "scenario": "UC004",
+      "flows": "FP; A2; A4"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/exportar/{formato}",
+      "scenario": "UC005",
+      "flows": "FP; A1–A4"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/servicos/{servico_id}/export",
+      "scenario": "UC006",
+      "flows": "FP; A1–A3"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/ordens_servico/{ordem_de_servico_id}",
+      "scenario": "UC004",
+      "flows": "FP; A3; A4"
+    },
+    {
+      "method": "GET",
+      "backend": "/api/v1/ordens_servico/{ordem_de_servico_id}/ativos",
+      "scenario": "UC001",
+      "flows": "A8"
+    }
+  ]
+}
